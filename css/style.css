@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Poppins:wght@300;400;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 
 :root{
     --black: #212529;
@@ -14,13 +15,17 @@
 }
 
 .header{
-    background-color: var(--black);
     color: var(--white);
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    position: fixed;
+    width: 100%;
+}
+
+.header.scrolled{
+    background-color: var(--black);
 }
 
 .brand{
@@ -81,7 +86,52 @@
     opacity: .7;
 }
 
+/* banner  */
+.banner{
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    padding: 12rem;
+    text-align: center;
+    color: var(--white);
+}
 
+.banner-heading{
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.banner-title{
+    font-size: 5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.cta{
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 900;
+    padding: 1rem;
+    text-transform: uppercase;
+    display: inline-block;
+    border-radius: 0.2rem;
+}
+
+/* media query for desktop device */
+@media screen and (min-width:768px){
+    .nav-toggle{
+        display: none;
+    }
+
+    .nav{
+        height: auto;
+        position: static;
+        flex-direction: row;
+        background-color: transparent;
+    }
+}
 
 
 /* animation */
