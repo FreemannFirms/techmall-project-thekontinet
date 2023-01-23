@@ -4,7 +4,7 @@
 :root{
     --black: #212529;
     --white: #f7f7f7;
-    --secondary-color: #707070; 
+    --secondary-color: #707070;
     --primary-color: #ffc800;
 }
 
@@ -15,6 +15,10 @@
     font-family: poppins;
 }
 
+img{
+    max-width: 100%;
+}
+
 .header{
     color: var(--white);
     padding: 1rem 2rem;
@@ -23,6 +27,7 @@
     align-items: center;
     position: fixed;
     width: 100%;
+    z-index: 10;
 }
 
 .header.scrolled{
@@ -120,63 +125,103 @@
     border-radius: 0.2rem;
 }
 
-/* Services */
-.section {
-    text-align: center;
-}
-
-.section-header {
+/* Service */
+.section{
     padding: 3rem 1rem;
     text-align: center;
 }
 
-.section-header > h2 {
+.section-header{
+    margin-bottom: 4rem;
+}
+
+.section-header > h2{
     font-size: 3rem;
 }
 
-.section-header > p {
+.section-header > p{
     font-size: 1.2rem;
     color: var(--secondary-color);
 }
 
-.service-card {
+.service-card{
     padding: 1.3rem;
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
 }
 
-.service-card .icon {
+.service-card .icon{
     display: block;
     background-color: var(--primary-color);
+    font-size: 3rem;
     width: 7rem;
     height: 7rem;
     border-radius: 100%;
-    font-size: 3rem;
     color: var(--white);
     display: grid;
-    /* justify-content: center;
-    align-items: center; */
     place-items: center;
     margin: 0 auto;
     transition: transform .3s;
 }
 
-.service-card:hover .icon {
-    transform: rotate(-45deg) scale(.7);
-    /* box-shadow: 0 2rem #000; */
+.service-card:hover .icon{
+    transform: rotate(-45deg) scale(0.7);
+    box-shadow: -.3rem .4rem 4rem .4rem rgba(0, 0, 0, 0.128);
 }
 
-.service-card h3 {
+.service-card h3{
     font-size: 1.5rem;
 }
 
-.service-card p {
+.service-card p{
     font-size: 1.2rem;
     color: var(--secondary-color);
 }
 
+/* portfolio */
+.portfolio{
+    background-color: #e7e5e5;
+}
 
+.card-group{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.card-group > .card{
+    width: 30%;
+    background-color: var(--white);
+}
+
+.card-body{
+    position: relative;
+}
+
+.card .icon-cover{
+    font-size: 5rem;
+    background-color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: grid;
+    place-items: center;
+    color: var(--white);
+    opacity: 0;
+    transition: all .3s;
+}
+
+.card:hover .icon-cover{
+    opacity: 1;
+}
+
+.card-footer{
+    padding: 1rem;
+}
 
 /* media query for desktop device */
 @media screen and (min-width:768px){
@@ -191,19 +236,19 @@
         background-color: transparent;
     }
 
-    .banner {
+    .banner{
         padding: 12rem;
     }
 
-    .banner-heading {
+    .banner-heading{
         font-size: 2.5rem;
     }
 
-    .banner-title {
+    .banner-title{
         font-size: 5rem;
     }
 
-    .service-list {
+    .service-list{
         display: flex;
         justify-content: center;
         padding: auto 4rem;
