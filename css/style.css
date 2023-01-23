@@ -4,6 +4,7 @@
 :root{
     --black: #212529;
     --white: #f7f7f7;
+    --secondary-color: #707070; 
     --primary-color: #ffc800;
 }
 
@@ -88,21 +89,21 @@
 
 /* banner  */
 .banner{
-    background-image: url(../images/banner.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,1)), url(../images/banner.jpg);
     background-size: cover;
-    padding: 12rem;
+    padding: 6rem 3rem;
     text-align: center;
     color: var(--white);
 }
 
 .banner-heading{
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 300;
     text-transform: capitalize;
 }
 
 .banner-title{
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 900;
     text-transform: uppercase;
 }
@@ -119,6 +120,64 @@
     border-radius: 0.2rem;
 }
 
+/* Services */
+.section {
+    text-align: center;
+}
+
+.section-header {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.section-header > h2 {
+    font-size: 3rem;
+}
+
+.section-header > p {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+}
+
+.service-card {
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.service-card .icon {
+    display: block;
+    background-color: var(--primary-color);
+    width: 7rem;
+    height: 7rem;
+    border-radius: 100%;
+    font-size: 3rem;
+    color: var(--white);
+    display: grid;
+    /* justify-content: center;
+    align-items: center; */
+    place-items: center;
+    margin: 0 auto;
+    transition: transform .3s;
+}
+
+.service-card:hover .icon {
+    transform: rotate(-45deg) scale(.7);
+    /* box-shadow: 0 2rem #000; */
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+}
+
+.service-card p {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+}
+
+
+
 /* media query for desktop device */
 @media screen and (min-width:768px){
     .nav-toggle{
@@ -130,6 +189,24 @@
         position: static;
         flex-direction: row;
         background-color: transparent;
+    }
+
+    .banner {
+        padding: 12rem;
+    }
+
+    .banner-heading {
+        font-size: 2.5rem;
+    }
+
+    .banner-title {
+        font-size: 5rem;
+    }
+
+    .service-list {
+        display: flex;
+        justify-content: center;
+        padding: auto 4rem;
     }
 }
 
