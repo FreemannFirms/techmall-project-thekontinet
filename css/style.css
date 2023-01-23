@@ -192,7 +192,7 @@ img{
 }
 
 .card-group > .card{
-    width: 30%;
+    width: 100%;
     background-color: var(--white);
 }
 
@@ -253,6 +253,25 @@ img{
         justify-content: center;
         padding: auto 4rem;
     }
+
+    .card-group > .card{
+        width: 30%;
+    }
+}
+
+/* modal */
+.modal{
+    position: fixed;
+    top: 2rem;
+    bottom: 2rem;
+    left: 2rem;
+    right: 2rem;
+    z-index: 15;
+
+    background-color: var(--white);
+    border-radius: .9rem;
+    padding: 1.2rem;
+    display: none;
 }
 
 

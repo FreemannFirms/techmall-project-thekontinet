@@ -17,3 +17,32 @@ window.addEventListener('scroll', function(event){
         headerEl.classList.remove('scrolled')
     }
 })
+
+function showModal(selector){
+    const modal = document.querySelector(selector)
+    modal.style.display = 'block'
+}
+
+function closeModal(selector){
+    const modal = document.querySelector(selector)
+    modal.style.display = 'none'
+}
+
+const buttons = document.querySelectorAll('.toggle-modal')
+
+for (let x = 0; x < buttons.length; x++) {
+    const button = buttons[x];
+    button.addEventListener('click', function(){
+        showModal(button.dataset.target)
+    })
+}
+
+const closeButtons = document.querySelectorAll('.modal .close')
+
+for (let x = 0; x < closeButtons.length; x++) {
+    const closeButton = closeButtons[x];
+    closeButton.addEventListener('click', function(){
+        const id = closeButton.parentElement.getAttribute('id')
+        closeModal('#' + id)
+    })
+}
